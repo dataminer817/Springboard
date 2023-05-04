@@ -1,0 +1,84 @@
+{\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Courier New;}}
+{\colortbl ;\red17\green17\blue17;\red255\green255\blue255;}
+{\*\generator Riched20 10.0.19041}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\b\f0\fs22\lang9 Modeling Phase:\b0  For the modeling phase of the credit card credit score classification project I chose three different models to run against the train and test data files:  a Decision Tree Classifier, a Logistic Regression classifier and a Random Forest classifier.  The Python code was run in three separate Jupyter files for each type of model.\par
+\b The Problem:  \b0 the problem being measured here is to predict credit scores (target Y variable with values 1, 2, 3) when compared with a range of numerical X variable data columns.  The challenge is to make predictions of Credit Score from the training data using three different classification models and evaluate their accuracy scores and cross validation metrics.  I also made slight changes to the hyperparameters and then re-ran the models to find new optimal hyperparameter values.  This was also done as part of my own learning as I worked through the code.\par
+\b The Three Models:\b0\par
+The Random Forest classifier scored the best at an accuracy of .77 when using n_estimator at 20; setting it at larger n_estimator caused the Python compiler to run for a very long time.  The cross validation function returned these parameters as being optimal:\par
+\b 'criterion': 'gini', 'max_depth': 7, 'min_samples_leaf': 5, 'min_samples_split': 2, 'n_estimators': 20\b0\par
+For the \b Random Forest \b0 Classifier algorithm the accuracy, recall, precision, and F1 scores are all the same value, and my preliminary research means that the model is perfectly predicting the target class.  I do not trust the output of this and perhaps more research is needed:\par
+
+\pard\sl276\slmult1   Accuracy: 0.77\par
+  Recall: 0.77\par
+  Precision: 0.77\par
+  F1 score: 0.77\par
+
+\pard\sa200\sl276\slmult1 When accuracy, recall, precision, and F1 scores are all the same value, it means that the model is perfectly predicting the target class. My internet research says this is a very rare occurrence, and it is usually only possible with very simple models or with very large datasets.\par
+These are the parameters used in the Grid Search Cross Validation phase when tuning the Hyperparameters:\par
+n_estimators: This is the number of trees in the random forest. A higher number of trees will generally lead to a better model, but it will also take longer to train the model.\par
+max_depth: This is the maximum depth of each tree in the random forest. A higher maximum depth will generally lead to a better model, but it can also lead to overfitting.\par
+min_samples_split: This is the minimum number of samples required to split a node in a tree. A higher minimum number of samples will generally lead to a more robust model, but it can also lead to a less accurate model.\par
+min_samples_leaf: This is the minimum number of samples required to be in a leaf node. A higher minimum number of samples will generally lead to a more robust model, but it can also lead to a less accurate model.\par
+max_features: This is the maximum number of features considered when splitting a node in a tree. A higher maximum number of features will generally lead to a more accurate model, but it can also lead to overfitting.\par
+criterion: the criterion parameter in the decision tree classification model is used to measure the quality of a split. The most common criteria are Gini impurity and entropy.\par
+\par
+Gini impurity: This is a measure of how pure a node is. A node is pure if all of the instances in the node belong to the same class. The Gini impurity of a node is calculated by summing the Gini impurities of its children nodes.\par
+Entropy: This is a measure of how uncertain a node is. A node is uncertain if the instances in the node are evenly distributed between the different classes. The entropy of a node is calculated by summing the entropies of its children nodes.\par
+\par
+\par
+The \b Decision Tree \b0 Classifier\b  \b0 performed initial Accuracy, Recall, Precision, F1 Scores:\par
+
+\pard\sl276\slmult1  Accuracy: 0.68\par
+  Recall: 0.68\par
+  Precision: 0.68\par
+  F1 score: 0.68\par
+
+\pard\sa200\sl276\slmult1\par
+Running the Grid Search with Cross-Validation script yielded better hyperparameters that increase the accuracy to: 7019081171332899\par
+'criterion': 'gini', 'max_depth': 10, 'max_features': None, 'min_samples_leaf': 1, 'min_samples_split': 2, 'splitter': 'best' \par
+\par
+The lowest performing model was the \b Logistic Regression \b0 Classifier and here are the initial Accuracy, Recall, Precision and F1 scores:\par
+
+\pard\sl276\slmult1  Accuracy: 0.56\par
+  Recall: 0.56\par
+  Precision: 0.46\par
+  F1 score: 0.50 \par
+\par
+
+\pard\sa200\sl276\slmult1 The accuracy of 0.56 means that the model correctly predicted 56% of the instances. The recall of 0.56 means that the model correctly predicted 56% of the positive instances. The precision of 0.46 means that the model correctly predicted 46% of the instances that it predicted to be positive. The F1 score of 0.50 is the harmonic mean of the precision and recall.\par
+Upon using the Grid Search with Cross validation script to tune the hyperparameters a higher model score was reached:\par
+Best Hyperparameters:\par
+'C': 0.001, 'fit_intercept': True, 'multi_class': 'multinomial', 'penalty': 'none', 'solver': 'saga'\par
+Best Accuracy Score:  0.6481968973061956\par
+\par
+The KNeighborsClassifier was also run and the accuracy score was .6735; I tried to run the scripts that varied the hyperparameters and the script was still running after 733 minutes so I had to end the script\par
+The confusion matrix and iterpretation of output:\par
+[[2238 1110   46]\par
+ [ 901 5285  270]\par
+ [  39 1556  568]]\par
+The confusion matrix provides a summary of the performance of the KNeighborsClassifier on the test dataset. The matrix shows the true class labels (actual values) along the rows and the predicted class labels (predicted values) along the columns. In this case, there are 3 classes: 0, 1, and 2.\par
+The knn.score(X_test, y_test) accuracy score of 0.6735 indicates that the classifier was able to correctly predict the class labels for approximately 67.35% of the test instances.\par
+Here's a detailed interpretation of the confusion matrix:\par
+Class 0:\par
+2,238 instances were correctly classified as class 0 (True Positives for class 0).\par
+1,110 instances were incorrectly classified as class 1 (False Positives for class 1 and False Negatives for class 0).\par
+46 instances were incorrectly classified as class 2 (False Positives for class 2 and False Negatives for class 0).\par
+Class 1:\par
+901 instances were incorrectly classified as class 0 (False Positives for class 0 and False Negatives for class 1).\par
+5,285 instances were correctly classified as class 1 (True Positives for class 1).\par
+270 instances were incorrectly classified as class 2 (False Positives for class 2 and False Negatives for class 1).\par
+Class 2:\par
+39 instances were incorrectly classified as class 0 (False Positives for class 0 and False Negatives for class 2).\par
+1,556 instances were incorrectly classified as class 1 (False Positives for class 1 and False Negatives for class 2).\par
+568 instances were correctly classified as class 2 (True Positives for class 2).\par
+In summary, the KNeighborsClassifier seems to perform best in classifying instances of class 1, with relatively lower performance for classes 0 and 2. The confusion matrix provides valuable insights into the classifier's performance, highlighting potential areas for improvement. To increase the model's accuracy, you might consider trying different hyperparameters, using a different algorithm, or augmenting the training dataset.\par
+\par
+
+\pard\cbpat2\widctlpar\sl540\slmult0\cf1\b\lang1033 Accuracy:\b0\~Percentage of total items classified correctly-\par
+Accuracy = (True Pos+True Neg) / (Negative+Positive)\par
+
+\pard\sa200\sl276\slmult1\cf0\lang9\par
+\par
+\par
+}
+ 
