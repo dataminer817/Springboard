@@ -29,3 +29,16 @@ The last step of data cleaning and preprocessing is the creation of train and te
 ![image](https://github.com/dataminer817/Springboard/assets/44590198/7e0d96e2-3bf7-4e9f-86b3-5653fa5874bd)
 
 
+## EDA: Exploratory Data Analysis
+
+The obvious first step for exploratory data analysis was to disaggregate explanatory numerical column values along Standard, Good and Poor credit score values by looking at their means, medians, and standard deviations and look to see which columns had noticeable differences.
+
+The interest rate charged for the array of customers with ‘Good’ credit: 
+![image](https://github.com/dataminer817/Springboard/assets/44590198/11ef80d2-0607-48a4-b8b5-cae05f3acfef)
+
+The interest rate charged for the array of customers with ‘Poor’ credit:
+![image](https://github.com/dataminer817/Springboard/assets/44590198/a8ad291f-f1b6-456e-96f6-23e74670df75)
+
+
+
+
