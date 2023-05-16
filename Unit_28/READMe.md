@@ -47,11 +47,31 @@ Correlation matrix to capture the underlying relationships or associations betwe
 
 ##  Machine Learning: Six Classifier Models
 [ML Notebooks](https://github.com/dataminer817/Springboard/tree/main/Unit_26/Unit_26.3_Modeling/)
+
 For the modeling phase of the credit card credit score classification project, six different classifier models to run against the train and test data credit card files:  a Decision Tree Classifier, a Logistic Regression classifier, Gaussian Naive Bayes Classifier, KNeighborsClassifier, XGBoost Classifier, and a Random Forest classifier.  The Python code was run in separate Jupyter files for each type of model here.
 The challenge is to make predictions of Credit Score and correctly identify both good and poor credit scores from the training data using the different classification models and evaluate their Accuracy, Recall, Precision scores and F1 Scores for all six models:
 
 ![image](https://github.com/dataminer817/Springboard/assets/44590198/a332a48a-14bd-40db-8945-c29dfd55103e)
 
+The F1-score was chosen as the best metric to use when evaluating the different machine learning classifier models reviewing credit card credit scores. The F1-score is a measure of a model's accuracy that takes into account both precision and recall. Precision is the fraction of predicted positives that are actually positive, and recall is the fraction of actual positives that are predicted positive. A high F1-score indicates that the model is both accurate and precise.
+In the context of credit card classification, a high F1-score indicates that the model is able to correctly identify both good and poor credit scores. This is important because it allows lenders to make informed decisions about who to extend credit to.
+
+Here is a table of the different metrics and what they measure:
+
+Metric	Definition
+Accuracy	The fraction of predictions that are correct.
+Precision	The fraction of predicted positives that are actually positive.
+Recall	The fraction of actual positives that are predicted positive.
+F1-score	The harmonic mean of precision and recall.
+
+
+## Hyperparameter Tuning:  
+
+The other classifier models underwent hyperparameter tuning and only the Random Forest hyperparameter will be examined here since the Random Forest classifier scored the best at an accuracy of .77 when using n_estimator at 20; setting it at larger n_estimator caused the Python compiler to run for a very long time.  The cross validation function returned these parameters as being optimal:
+
+![image](https://github.com/dataminer817/Springboard/assets/44590198/d6ea7502-6eeb-4fa1-b0fb-dcaaa829bf37)
+
+![image](https://github.com/dataminer817/Springboard/assets/44590198/ddc715bc-ea81-4b22-b6de-39310085f37f)
 
 
 
