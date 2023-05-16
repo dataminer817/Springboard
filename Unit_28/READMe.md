@@ -14,7 +14,18 @@ Python code snippet that shows Occupation column conversion:
 ![image](https://github.com/dataminer817/Springboard/assets/44590198/9bfd2a2f-9a99-4bd1-875b-95a7156482cd)
  
  
-Output for the original Occupation column:
+Output for the original Occupation column after dummy variables have been encoded:
  
  ![image](https://github.com/dataminer817/Springboard/assets/44590198/916f0252-486a-4770-a094-31a230c16923)
+ 
+
+Columns needing their magnitude re-scaled were done using the Standard Scaler library:
+
+![image](https://github.com/dataminer817/Springboard/assets/44590198/f4882f92-8741-427f-a5a4-15aa476b6a77)
+
+ 
+The last step of data cleaning and preprocessing is the creation of train and test files for the credit card data:
+
+![image](https://github.com/dataminer817/Springboard/assets/44590198/7e0d96e2-3bf7-4e9f-86b3-5653fa5874bd)
+
 
