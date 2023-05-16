@@ -46,6 +46,7 @@ Correlation matrix to capture the underlying relationships or associations betwe
 
 
 ##  Machine Learning: Six Classifier Models
+[ML Notebooks](https://github.com/dataminer817/Springboard/tree/main/Unit_26/Unit_26.3_Modeling/)
 For the modeling phase of the credit card credit score classification project, six different classifier models to run against the train and test data credit card files:  a Decision Tree Classifier, a Logistic Regression classifier, Gaussian Naive Bayes Classifier, KNeighborsClassifier, XGBoost Classifier, and a Random Forest classifier.  The Python code was run in separate Jupyter files for each type of model here.
 The challenge is to make predictions of Credit Score and correctly identify both good and poor credit scores from the training data using the different classification models and evaluate their Accuracy, Recall, Precision scores and F1 Scores for all six models:
 
