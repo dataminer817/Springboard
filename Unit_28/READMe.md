@@ -31,6 +31,8 @@ The last step of data cleaning and preprocessing is the creation of train and te
 
 ## EDA: Exploratory Data Analysis
 
+[EDA Notebooks](https://github.com/dataminer817/Springboard/tree/main/Unit_28/EDA_Python_Files/)
+
 The obvious first step for exploratory data analysis was to disaggregate explanatory numerical column values along Standard, Good and Poor credit score values by looking at their means, medians, and standard deviations and look to see which columns had noticeable differences.
 
 The interest rate charged for the array of customers with ‘Good’ credit: 
@@ -72,6 +74,12 @@ The other classifier models underwent hyperparameter tuning and only the Random 
 ![image](https://github.com/dataminer817/Springboard/assets/44590198/d6ea7502-6eeb-4fa1-b0fb-dcaaa829bf37)
 
 ![image](https://github.com/dataminer817/Springboard/assets/44590198/ddc715bc-ea81-4b22-b6de-39310085f37f)
+
+
+## Predictions and Findings:
+In concluding the modeling phase, the Random Forest Classifier greatly improved on the lowest ranking classifier, the Logistic Regression Classifier model: the Random Forest Classifier posted an Accuracy score of .77 versus .56 for the Logistic Regression Classifier, which corresponds to a 37.5% increase in credit scoring ability.  After hyperparameter tuning, the performance of the Random Forest Classifier improved further, solidifying its position as the most suitable model for credit score prediction in our study.  It may be possible to increase the number of n_estimators, i.e. the number of trees in the Random Forest as well as the max_depth parameter. In the context of credit card classification, a high F1-score was chosen as the most important metric since it indicates that the model is able to correctly identify both good and poor credit scores. This is important because it allows lenders to make informed decisions about who to extend credit to while maximizing profit and minimizing risk.
+
+![image](https://github.com/dataminer817/Springboard/assets/44590198/18311801-d56c-4390-948b-15dc57254380)
 
 
 
