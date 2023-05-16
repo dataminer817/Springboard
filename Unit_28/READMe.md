@@ -34,10 +34,25 @@ The last step of data cleaning and preprocessing is the creation of train and te
 The obvious first step for exploratory data analysis was to disaggregate explanatory numerical column values along Standard, Good and Poor credit score values by looking at their means, medians, and standard deviations and look to see which columns had noticeable differences.
 
 The interest rate charged for the array of customers with ‘Good’ credit: 
-![image](https://github.com/dataminer817/Springboard/assets/44590198/11ef80d2-0607-48a4-b8b5-cae05f3acfef)
+![image](https://github.com/dataminer817/Springboard/assets/44590198/b3e00a6c-dff7-422b-a7a7-deb805a471bb)
 
 The interest rate charged for the array of customers with ‘Poor’ credit:
 ![image](https://github.com/dataminer817/Springboard/assets/44590198/a8ad291f-f1b6-456e-96f6-23e74670df75)
+
+
+Correlation matrix to capture the underlying relationships or associations between all the numeric explanatory variables. 
+![image](https://github.com/dataminer817/Springboard/assets/44590198/f31a4403-c42f-4133-8f8d-912118f1e981)
+
+
+
+##  Machine Learning: Six Classifier Models
+For the modeling phase of the credit card credit score classification project, six different classifier models to run against the train and test data credit card files:  a Decision Tree Classifier, a Logistic Regression classifier, Gaussian Naive Bayes Classifier, KNeighborsClassifier, XGBoost Classifier, and a Random Forest classifier.  The Python code was run in separate Jupyter files for each type of model here.
+The challenge is to make predictions of Credit Score and correctly identify both good and poor credit scores from the training data using the different classification models and evaluate their Accuracy, Recall, Precision scores and F1 Scores for all six models:
+
+![image](https://github.com/dataminer817/Springboard/assets/44590198/a332a48a-14bd-40db-8945-c29dfd55103e)
+
+
+
 
 
 
