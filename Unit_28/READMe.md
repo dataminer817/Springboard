@@ -45,6 +45,13 @@ The interest rate charged for the array of customers with ‘Poor’ credit:
 Correlation matrix to capture the underlying relationships or associations between all the numeric explanatory variables. 
 ![image](https://github.com/dataminer817/Springboard/assets/44590198/f31a4403-c42f-4133-8f8d-912118f1e981)
 
+One of the counterintuitive variables was there was not a huge dollar difference amount when viewing the Annual Income variable across Good, Poor and Standard credit scores:
+
+![image](https://github.com/dataminer817/Springboard/assets/44590198/a3f893cf-43a4-4e78-9a57-fd13b9af76e9)
+
+Another surprising metric was Credit_Utilization_Ratio, which showed virtually no difference for Poor credit scores versus Good credit scores:
+
+![image](https://github.com/dataminer817/Springboard/assets/44590198/b98fceaf-2d52-4525-bc7a-15886ebb3793)
 
 
 ##  Machine Learning: Six Classifier Models
